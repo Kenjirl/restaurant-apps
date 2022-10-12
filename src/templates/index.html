@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/5b8fa639bb.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <title>Where To Eat</title>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+        <header>
+            <div class="header__inner" tabindex="0" aria-label="Where to Eat">
+                <img
+					id="logo"
+                    class="header__logo"
+                    src="https://drive.google.com/uc?id=1W0yNV_jSIt6NSz3xyVbwljWMgshCo_vf"
+                    alt="Where to Eat's web icon"
+                />
+                <h1 class="header__title">WHERE TO EAT</h1>
+            </div>
+
+            <button id="navButton" class="nav-button" type="button" aria-label="menu button">MENU</button>
+
+            <nav id="nav" class="nav hidden">
+                <a class="nav__item" aria-label="Go to Home" href="/">Home</a>
+                <a class="nav__item" aria-label="Go to Favorite" href="#">Favorite</a>
+                <a class="nav__item" aria-label="Go to About Us" href="https://github.com/Kenjirl/" target="_blank">About Us</a>
+
+                <div class="dropdown">
+                    <button id="dropdownBtn" class="dropdown__btn" type="button" aria-label="dropdown button">Move to</button>
+                    <div id="dropdownList" class="dropdown__list">
+                        <a id="dropItem" aria-label="Go to restaurant section" class="dropdown__item" href="#restaurant">Daftar Restoran</a>
+                        <a id="dropItem" aria-label="Go to menu section" class="dropdown__item" href="#menu">Daftar Makanan</a>
+                        <a id="dropItem" aria-label="Go to social media section" class="dropdown__item" href="#sosmed-section">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <div class="hero-inner">
+                <h2 class="hero-title">"Where Should We eat today?"</h1>
+                <p class="hero-tagline">
+                    Hindari jawaban "Terserah" ketika bertanya "Ingin makan di mana?". 
+                    <br>
+                    Where to Eat memberikan solusi dengan menyediakan berbagai tempat makan favorit berdasarkan penilaian masyarakat. 
+                </p>
+            </div>
+        </div>
+
+        <main id="main-content">
+			<section id="restaurant" tabindex="0">
+				<div class="main__inner">
+					<h2 class="main__title">Daftar Restoran</h2>
+				</div>
+
+				<div id="restaurantList" class="restaurant-list"></div>
+			</section>
+
+			<section id="menu" tabindex="0">
+				<div class="main__inner">
+					<h2 class="main__title">Daftar Menu</h2>
+				</div>
+
+				<div id="menuList" class="menu-list"></div>
+			</section>
+        </main>
+
+        <footer>
+            <section id="sosmed-section" class="sosmed-section" tabindex="0">
+                <h2 class="sosmed__title">Contact Me :</h2>
+                <div class="sosmed__list">
+                    <a
+                        href="mailto:kenjiro442@gmail.com"
+                        target="_blank"
+                        title="mail"
+						aria-label="email icon"
+                        ><i class="fa-solid fa-envelope"></i
+                    ></a>
+                    <a
+                        href="https://wa.me/+6281246007474"
+                        target="_blank"
+                        title="whatsapp"
+						aria-label="whatsapp icon"
+                        ><i class="fa-brands fa-whatsapp"></i
+                    ></a>
+                    <a
+                        href="https://www.instagram.com/kenjirl_/"
+                        target="_blank"
+                        title="instagram"
+						aria-label="instagram icon"
+                        ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a
+                        href="https://www.facebook.com/kenji.yamazaki.752487"
+                        target="_blank"
+                        title="facebook"
+						aria-label="facebook icon"
+                        ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a
+                        href="https://discordapp.com/users/574566401969225729"
+                        target="_blank"
+                        title="discord"
+						aria-label="discord icon"
+                        ><i class="fa-brands fa-discord"></i
+                    ></a>
+                </div>
+            </section>
+            <span class="copyright">copyright &copy 2022 - Where to Eat</span>
+        </footer>
+    </body>
+</html>
