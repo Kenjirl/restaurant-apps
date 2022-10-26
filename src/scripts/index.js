@@ -1,15 +1,23 @@
-import "regenerator-runtime"; /* for async await transpile */
-import "../styles/main.css";
-import navbar from "./components/nav-bar.js";
-import dropdown from "./components/dropdown.js";
-import renderRestaurant from "./components/restaurant-list.js";
-import renderMenu from "./components/menu-list.js";
+import 'regenerator-runtime';
+import '../styles/main.css';
+import '../styles/responsive.css';
+import NavbarInitiator from './utils/navbar-initiator';
+import DropdownInitiator from './utils/dropdown-initiator';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-const main = () => {
-    navbar();
-    dropdown();
-    renderRestaurant();
-    renderMenu();
-};
+NavbarInitiator();
+DropdownInitiator();
 
-document.addEventListener("DOMContentLoaded", main);
+const app = new App({
+  content: document.querySelector('main'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+});

@@ -1,0 +1,267 @@
+@media screen and (min-width: 500px) {
+  .header__title {
+    font-size: 2em;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 0 1em 1em 1em;
+    z-index: 0;
+  }
+
+  .nav__item {
+    display: inline-flex;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 0.1px var(--color-3);
+    border: 2px solid var(--color-3);
+    border-radius: 5px;
+    font-size: 1em;
+  }
+
+  .nav__item:focus,
+  .nav__item:hover {
+    background-color: #bcb285;
+    color: white;
+  }
+
+  .nav__item:active {
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+    box-shadow: none;
+  }
+
+  .dropdown {
+    position: relative;
+    min-width: 100%;
+  }
+
+  .dropdown__btn {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    box-shadow: 0 5px 0.1px var(--color-3);
+    border: 2px solid var(--color-3);
+    border-radius: 5px;
+    background-color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: all .3s ease;
+  }
+
+  .dropdown__btn:focus,
+  .dropdown__btn:hover {
+    background-color: #bcb285;
+    color: white;
+  }
+
+  .dropdown__btn:active {
+    -webkit-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+    box-shadow: none;
+  }
+
+  .dropdown__list {
+    position: absolute;
+    top: 50px;
+    border-top: 2px solid var(--color-2);
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  .drop__open {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-tagline {
+    font-size: 1.2em;
+  }
+
+  .restaurant-menu {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .restaurant-menu > div > ul{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-container {
+    left: 1em;
+    width: min-content;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__inner {
+    display: block;
+    width: 40%;
+  }
+
+  .nav {
+    width: 60%;
+    padding-top: 1em;
+  }
+
+  .restaurant-list {
+    margin: 0 auto;
+    max-width: 830px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant {
+    max-width: 400px;
+  }
+
+  .menu {
+    max-width: 250px;
+  }
+
+  .menu__img {
+    max-height: 250px;
+  }
+
+  .restaurant-detail {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .restaurant-menu > div > ul{
+    grid-template-columns: 1fr;
+    font-size: 1em;
+  }
+
+  .reviews {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .reviews-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .info__nama {
+    text-decoration: none;
+  }
+
+  .info__nama:hover {
+    text-decoration: underline;
+  }
+
+  .restaurant-detail {
+    margin: 0 auto;
+  }
+
+  .restaurant-menu > div > ul{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviews-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 1em 2em;
+  }
+
+  .header__inner {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__logo {
+    display: block;
+    max-width: 100px;
+    border-radius: 50%;
+  }
+
+  .header__title {
+    font-size: 2.5em;
+  }
+
+  .nav {
+    width: 50%;
+  }
+
+  .hero {
+    min-width: 1000px;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1230px;
+  }
+
+  .restaurant {
+    max-width: 400px;
+  }
+
+  .menu {
+    max-width: 400px;
+  }
+
+  .info__detail {
+    font-size: 0.9em;
+  }
+
+  footer {
+    padding: 0;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+  }
+
+  .sosmed-section {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .sosmed__title {
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sosmed__list {
+    justify-content: space-evenly;
+  }
+
+  .copyright {
+    width: 100%;
+  }
+}

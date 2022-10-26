@@ -1,22 +1,22 @@
-import myData from "../../DATA.json";
-import $ from "jquery";
+import $ from 'jquery';
+import CONFIG from '../globals/config';
 
-const renderRestaurant = () => {
-    const restaurant_list = myData.restaurants;
-
-    restaurant_list.forEach((restaurant) => {
-        $("#restaurantList").append(`
-            <article class="restaurant">
-                <label class="restaurant__rating">${restaurant.rating}</label>
-                <img class="restaurant__img" src="${restaurant.pictureId}" alt="Foto ${restaurant.name}">
-                <div class="card__info">
-                    <h3 class="info__nama">${restaurant.name}</h3>
-                    <p class="info__kota">${restaurant.city}</p>
-                    <p class="info__detail">${restaurant.description}</p>
-                </div>
-            </article>
-        `);
-    });
+const renderRestaurant = (restaurantList) => {
+  restaurantList.forEach((restaurant) => {
+    $('#restaurantList').append(`
+      <article class="restaurant">
+        <label class="restaurant__rating">${restaurant.rating}</label>
+        <img class="restaurant__img" src="${CONFIG.BASE_IMG_URL}/${restaurant.pictureId}" alt="Foto ${restaurant.name}">
+        <div class="card__info">
+          <a class="info__nama" href="/#/detail/${restaurant.id}">
+            ${restaurant.name}
+          </a>
+          <p class="info__kota">${restaurant.city}</p>
+          <p class="info__detail">${restaurant.description}</p>
+        </div>
+      </article>
+    `);
+  });
 };
 
 export default renderRestaurant;
