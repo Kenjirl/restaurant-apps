@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import RestaurantSource from '../../data/restaurant-api';
 import renderRestaurant from '../../components/restaurant-list';
 import SkipToContent from '../../utils/skip-to-content';
@@ -33,15 +32,7 @@ const HomePage = {
 
   async afterRender() {
     const restaurants = await RestaurantSource.restaurantList();
-    if (restaurants.length) {
-      renderRestaurant(restaurants);
-    } else {
-      $('#homeMainContent').append(`
-        <div class="restaurant-not-found">
-          <h3>Belum ada data yang tersedia</h3>
-        </div>
-      `);
-    }
+    renderRestaurant(restaurants);
     SkipToContent();
   },
 };

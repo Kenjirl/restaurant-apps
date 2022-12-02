@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import renderRestaurant from '../../components/restaurant-list';
 import RestaurantIdb from '../../data/restaurant-idb';
 import SkipToContent from '../../utils/skip-to-content';
@@ -22,14 +21,11 @@ const FavoritePage = {
 
   async afterRender() {
     const restaurants = await RestaurantIdb.getAllRestaurant();
-    if (restaurants.length) {
-      renderRestaurant(restaurants);
-    } else {
-      $('#favoriteMainContent').append(`
-        <div class="restaurant-not-found">
-          <h3>Anda belum memilih restaurant favorit Anda</h3>
-        </div>
-      `);
+    renderRestaurant(restaurants);
+    const restaurantContainer = document.querySelector('#favoriteMainContent');
+
+    if (restaurants.length === 0) {
+      restaurantContainer.innerHTML = 'you are not liking any restaurant';
     }
     SkipToContent();
   },

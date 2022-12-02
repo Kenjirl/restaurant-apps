@@ -2,11 +2,11 @@ import $ from 'jquery';
 import CONFIG from '../globals/config';
 
 const renderDetailRestaurant = (restaurant) => {
-  const { foods, drinks } = restaurant.menus;
+  const {foods, drinks} = restaurant.menus;
   foods.sort((a, b) => (a.name > b.name ? 1 : -1));
   drinks.sort((a, b) => (a.name > b.name ? 1 : -1));
 
-  const { customerReviews } = restaurant;
+  const {customerReviews} = restaurant;
 
   $('#restaurantDetail').append(`
     <section class="detail-card">
@@ -32,8 +32,7 @@ const renderDetailRestaurant = (restaurant) => {
 
     <section class="reviews">
       <h3>Ulasan</h3>
-      <div id="customerReviews" class="reviews-list">
-      </div>
+      <div id="customerReviews" class="reviews-list"></div>
     </section>
   `);
 

@@ -3,7 +3,6 @@ import RestaurantSource from '../../data/restaurant-api';
 import renderDetailRestaurant from '../../components/restaurant-detail';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import SkipToContent from '../../utils/skip-to-content';
-import ReviewFormInitiator from '../../utils/review-form-initiator';
 
 const DetailPage = {
   async render() {
@@ -16,7 +15,6 @@ const DetailPage = {
         </div>
         <article id="restaurantDetail" class="restaurant-detail" tabindex="0"></article>
         <div id="likeButtonContainer"></div>
-        <div id="formContainer" class="form-container"></div>
       </div>
     `;
   },
@@ -28,8 +26,6 @@ const DetailPage = {
 
     renderDetailRestaurant(restaurant);
     SkipToContent();
-    ReviewFormInitiator(restaurant.id);
-    console.log(restaurant);
     LikeButtonInitiator.init({
       restaurant: {
         id: restaurant.id,

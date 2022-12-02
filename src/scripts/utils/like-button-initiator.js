@@ -1,16 +1,16 @@
 import $ from 'jquery';
-import { renderLikeButton, renderLikedButton } from '../components/like-button';
+import {renderLikeButton, renderLikedButton} from '../components/like-button';
 import RestaurantIdb from '../data/restaurant-idb';
 
 const LikeButtonInitiator = {
-  async init({ restaurant }) {
+  async init({restaurant}) {
     this._restaurant = restaurant;
 
     await this._renderButton();
   },
 
   async _renderButton() {
-    const { id } = this._restaurant;
+    const {id} = this._restaurant;
 
     if (await this._isRestaurantExist(id)) {
       this._renderLiked();
@@ -27,7 +27,7 @@ const LikeButtonInitiator = {
   _renderLike() {
     renderLikeButton();
 
-    $('#likeButtonContainer').click(async () => {
+    $('#likeButton').click(async () => {
       await RestaurantIdb.putRestaurant(this._restaurant);
       this._renderButton();
     });
@@ -36,7 +36,7 @@ const LikeButtonInitiator = {
   _renderLiked() {
     renderLikedButton();
 
-    $('#likeButtonContainer').click(async () => {
+    $('#likeButton').click(async () => {
       await RestaurantIdb.deleteRestaurant(this._restaurant.id);
       this._renderButton();
     });

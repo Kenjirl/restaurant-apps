@@ -88,6 +88,10 @@
     transform: scale(1);
   }
 
+  .hero{
+    background-image: url('./images/hero-small.jpg');
+  }
+
   .hero-title {
     font-size: 2em;
   }
@@ -103,11 +107,6 @@
 
   .restaurant-menu > div > ul{
     grid-template-columns: 1fr 1fr;
-  }
-
-  .form-container {
-    left: 1em;
-    width: min-content;
   }
 }
 
@@ -125,6 +124,10 @@
   .nav {
     width: 60%;
     padding-top: 1em;
+  }
+
+  .hero{
+    background-image: url('./images/hero-small.jpg');
   }
 
   .restaurant-list {
@@ -219,6 +222,7 @@
 
   .hero {
     min-width: 1000px;
+    background-image: url('./images/hero-large.jpg');
   }
 
   .restaurant-list {

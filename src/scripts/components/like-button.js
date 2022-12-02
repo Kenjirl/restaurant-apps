@@ -16,4 +16,4 @@ const renderLikedButton = () => {
   `);
 };
 
-export { renderLikeButton, renderLikedButton };
+export {renderLikeButton, renderLikedButton};
