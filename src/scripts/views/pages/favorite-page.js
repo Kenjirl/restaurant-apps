@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 import renderRestaurant from '../../components/restaurant-list';
 import RestaurantIdb from '../../data/restaurant-idb';
 import SkipToContent from '../../utils/skip-to-content';
@@ -5,7 +6,8 @@ import SkipToContent from '../../utils/skip-to-content';
 const FavoritePage = {
   async render() {
     return `
-      <button tabindex="1" id="favoriteSkipBtn" class="skip-to-main">Skip to main content</button>
+      <button tabindex="1" id="favoriteSkipBtn" 
+        class="skip-to-main">Skip to main content</button>
 
       <div id="favoriteMainContent" tabindex="-1">
         <section id="restaurant">

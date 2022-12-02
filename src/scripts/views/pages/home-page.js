@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 import RestaurantSource from '../../data/restaurant-api';
 import renderRestaurant from '../../components/restaurant-list';
 import SkipToContent from '../../utils/skip-to-content';
@@ -9,14 +10,16 @@ const HomePage = {
         <div class="hero-inner">
             <h2 class="hero-title">"Where Should We eat today?"</h1>
             <p class="hero-tagline">
-                Hindari jawaban "Terserah" ketika bertanya "Ingin makan di mana?". 
+            Hindari jawaban "Terserah" ketika bertanya "Ingin makan di mana?". 
                 <br>
-                Where to Eat memberikan solusi dengan menyediakan berbagai tempat makan favorit berdasarkan penilaian masyarakat. 
+                Where to Eat memberikan solusi dengan menyediakan berbagai 
+                tempat makan favorit berdasarkan penilaian masyarakat. 
             </p>
         </div>
       </div>
 
-      <button tabindex="1" id="homeSkipBtn" class="skip-to-main" aria-label="skip to content">Skip to main content</button>
+      <button tabindex="1" id="homeSkipBtn" class="skip-to-main" 
+        aria-label="skip to content">Skip to main content</button>
 
       <div id="homeMainContent" tabindex="-1">
         <section id="restaurant">

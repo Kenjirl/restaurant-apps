@@ -6,7 +6,9 @@ const renderRestaurant = (restaurantList) => {
     $('#restaurantList').append(`
       <article class="restaurant">
         <label class="restaurant__rating">${restaurant.rating}</label>
-        <img class="restaurant__img lazyload" src="${CONFIG.BASE_IMG_URL}/${restaurant.pictureId}" alt="Foto ${restaurant.name}">
+        <img class="restaurant__img lazyload" 
+            data-src="${CONFIG.BASE_IMG_URL}/${restaurant.pictureId}" 
+           alt="Foto ${restaurant.name}">
         <div class="card__info">
           <a class="info__nama" href="/#/detail/${restaurant.id}">
             ${restaurant.name}
